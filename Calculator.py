@@ -17,6 +17,10 @@ def mul(x, y):
 def div(x,y):
     result = int(x) / int(y)
     print (result)
+# Create mod function
+def mod(x,y):
+    result = int(x) % int(y)
+    print (result)
 
 # Clear initial variable
 on = 0
@@ -39,17 +43,29 @@ while on < 1:
         # Call addition function
         add(op.split(' ')[0], op.split(' ')[2])
 
+    # Check if it is a subraction
     elif op.split(' ')[1] == '-':
 
         # Call subtraction function
         sub(op.split(' ')[0], op.split(' ')[2])
 
+    # Check if it is a multiplication
     elif op.split(' ')[1] == '*' or op.split(' ')[1] == 'x':
 
         # Call subtraction function
         mul(op.split(' ')[0], op.split(' ')[2])
 
+    # Check if it is a division
     elif op.split(' ')[1] == '/':
 
         # Call subtraction function
         div(op.split(' ')[0], op.split(' ')[2])
+
+    # Check if it is a mod question
+    elif op.split(' ')[1] == '%':
+
+        # Call mod function
+        mod(op.split(' ')[0], op.split(' ')[2])
+
+    else:
+        print ("Please enter a valid 3 part calculation")
